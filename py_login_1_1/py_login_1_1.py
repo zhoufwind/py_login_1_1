@@ -40,13 +40,10 @@ def login(times):
             for i in range(times):      # Verify the user name and password
                 pwd = raw_input('Enter Password: ')
                 if pwd == database[name]:
-                    login = True
+                    print 'Login Success!!\nWelcome!!'
                     break
                 else:
-                    login = False
                     print 'Password Incorrect!'
-            if login:
-                print 'Login Success!!\nWelcome!!'
             else:
                 print 'Login Failed 3 times, block this account!!'
                 write(name)     # Adding user into blockList
